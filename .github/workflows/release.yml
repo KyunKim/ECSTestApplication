@@ -26,7 +26,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          allow_duplicate: true
           tag_name: ${{ env.TAG }}
           release_name: ${{ env.TAG }}
       
