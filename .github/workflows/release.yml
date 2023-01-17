@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: test
         run: echo '${{github.event.head_commit.message}}'
-
       - name: Get branch names
         id: branch-name
         uses: tj-actions/branch-names@v4.9
