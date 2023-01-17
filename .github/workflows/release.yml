@@ -27,4 +27,15 @@ jobs:
         with:
           tag_name: ${{ env.TAG }}
           release_name: ${{ env.TAG }}
-      
+    
+      - name: Jira Release
+        id: release
+        uses: PRNDcompany/jira-release@v1.2
+        with:
+          domain: 'https://istay-test1.atlassian.net'
+          project: 'I20'
+          version: DEV ${{ env.TAG }}
+          auth-token: 'a2tpbUBpc3RheS5pbzppVU55ZUNwV1RXR2xuZWs1eXlodEJGMjc='
+      - name: Print New Version
+        run: |
+          echo ${{ steps.release.outputs.new-version }}
