@@ -24,6 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          allow_duplicate: true
           tag_name: ${{ env.TAG }}
           release_name: ${{ env.TAG }}
       - name: Jira Release
@@ -32,7 +33,7 @@ jobs:
         with:
           domain: 'istay-test1'
           project: 'I20'
-          version: DEV ${{ env.TAG }}
+          version: 'DEV ${{ env.TAG }}'
           auth-token: 'a2tpbUBpc3RheS5pbzppVU55ZUNwV1RXR2xuZWs1eXlodEJGMjc='
       - name: Print New Version
         run: |
