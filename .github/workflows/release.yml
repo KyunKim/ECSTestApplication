@@ -27,7 +27,6 @@ jobs:
         with:
           tag_name: ${{ env.TAG }}
           release_name: ${{ env.TAG }}
-    
       - name: Jira Release
         id: release
         uses: PRNDcompany/jira-release@v1.2
