@@ -2,6 +2,8 @@ name: Jira Release
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ "master" ]
 jobs:
   build:
     runs-on: ubuntu-latest
