@@ -32,7 +32,7 @@ jobs:
         id: release
         uses: PRNDcompany/jira-release@v1.2
         with:
-          domain: 'https://istay-test1.atlassian.net'
+          domain: 'istay-test1'
           project: 'I20'
           version: DEV ${{ env.TAG }}
           auth-token: 'a2tpbUBpc3RheS5pbzppVU55ZUNwV1RXR2xuZWs1eXlodEJGMjc='
