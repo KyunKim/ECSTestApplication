@@ -25,4 +25,10 @@ public class ECSTestController {
         return "test-3dsds123 success";
     }
 
+    @GetMapping("/test/main/1")
+    public String getTestMain1() {
+        return "test-1 success";
+    }
+
+
 }
